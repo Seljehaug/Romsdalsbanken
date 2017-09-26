@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400; }
+
+body {
+  font-size: 100%;
+  background: #ffffff; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0.2em; }
+
+p, a {
+  font-size: 1rem; }
+
+.inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+
+.content-wrapper {
+  padding: 2rem 0; }
+
+#top-line {
+  height: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  #top-line .left, #top-line .right {
+    background: #98BC37;
+    height: 20px; }
+  #top-line .left {
+    width: 200px;
+    margin-right: 40px; }
+  #top-line .right {
+    width: 100%; }
+
+.icon {
+  display: block;
+  padding: 0 0;
+  text-indent: -9999px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.logo-romsdalsbanken {
+  background-image: url("../img/icons/romsdalsbanken_st.svg");
+  height: 100px; }
+
+.logo-bfh {
+  background-image: url("../img/icons/bfh.svg");
+  height: 100px; }
+
+.logo-nessetbanken {
+  background-image: url("../img/icons/nessetbanken.svg");
+  height: 100px; }
+
+#top-section .box {
+  width: 49%;
+  float: left; }
+
+#top-section .box-left {
+  position: relative;
+  margin-top: 2rem;
+  margin-right: 2%; }
+
+#top-section .text-content {
+  padding: 2rem;
+  background: #98BC37;
+  color: #ffffff;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative; }
+
+#top-section h3 span {
+  display: block; }
+
+#top-section .panel-first {
+  background: #007580;
+  height: 420px;
+  width: 80px;
+  position: absolute;
+  left: -20px;
+  top: -50px;
+  height: 130%;
+  z-index: -1;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out; }
+
+#top-section .panel-second {
+  background: #007580;
+  height: 130%;
+  width: 250px;
+  position: absolute;
+  left: 100px;
+  top: -20px;
+  z-index: -1;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out; }
+
+#top-section .box-right {
+  margin-top: 5rem; }
+
+#top-section .img-content {
+  max-width: 450px;
+  position: relative; }
+
+#top-section .panel-third {
+  background: #98BC37;
+  height: 130%;
+  width: 300px;
+  position: absolute;
+  right: 40px;
+  top: -40px;
+  z-index: -1;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out;
+  -o-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out; }
+
+#top-section img {
+  width: 100%; }
+
+#top-section .bank-logos {
+  clear: both;
+  max-width: 500px;
+  width: 100%; }
+  #top-section .bank-logos .icon {
+    display: inline-block;
+    width: 50%;
+    padding: 1%; }
+
+@media (max-width: 900px) {
+  #top-section .panel-first {
+    width: 64px;
+    -webkit-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out; }
+  #top-section .panel-second {
+    width: 200px;
+    -webkit-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out; }
+  #top-section .panel-third {
+    width: 240px;
+    -webkit-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out; } }
+
+@media (max-width: 750px) {
+  #top-section .panel-first, #top-section .panel-second, #top-section .panel-third {
+    display: none; }
+  #top-section .box {
+    width: 100%; }
+  #top-section .box-left {
+    margin: 0; }
+  #top-section .box-right {
+    margin-top: 2rem; }
+  #top-section .img-content {
+    margin: 0 auto; } }
