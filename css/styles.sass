@@ -12,11 +12,15 @@ body
 	background: $white
 
 h1
-	// font-size: 2.5rem
+	font-size: 3.5rem
 h2
 	font-size: 2.5rem
+	margin-bottom: 1rem
 h3
 	font-size: 2rem
+	margin-bottom: 0.2em
+h4
+	font-size: 1.4rem
 	margin-bottom: 0.2em
 p,a
 	font-size: 1.2rem
@@ -34,11 +38,16 @@ p,a
 	position: relative
 
 .content-wrapper
-	padding: 2rem 0
+	padding: 4rem 0
 	overflow: hidden
+@media(max-width: 750px)
+	.content-wrapper
+		padding: 2rem 0
 
 .center
 	text-align: center
+.bold
+	font-weight: 600
 
 #top-line
 	height: 20px
@@ -54,26 +63,7 @@ p,a
 		// max-width: 1200px
 		width: 100%
 
-// --- two-boxes ---
-.two-boxes
-	overflow: hidden
-	display: flex
-	.box
-		width: 49%
-		float: left
-	.box:first-child
-		margin-right: 2%
-@media(max-width: 750px)
-	.two-boxes
-		flex-direction: column
-		.box
-			width: 100%
-		.box:first-child
-			margin-right: 0
-			margin-bottom: 2rem
-// end of two-boxes
-
-// --- ICONS AND LOGOS ---
+// --- Icons and logos ---
 .icon
 	display: block
 	padding: 0 0
@@ -100,6 +90,55 @@ p,a
 	height: 30px
 	margin-top: 15px
 // End of icons and logos
+
+// --- two-boxes ---
+.two-boxes
+	overflow: hidden
+	display: flex
+	align-items: center
+	.box
+		width: 49%
+		// float: left
+	.box:first-child
+		margin-right: 2%
+	p
+		margin-bottom: 1rem
+	p:last-child
+		margin-bottom: 0
+@media(max-width: 750px)
+	.two-boxes
+		flex-direction: column
+		.box
+			width: 100%
+		.box:first-child
+			margin-right: 0
+			margin-bottom: 2rem
+// end of two-boxes
+
+// --- text-section ---
+.text-section
+	max-width: 500px
+	margin: 0 auto
+	h3
+		color: $blue
+	p
+		margin-left: 40px
+	.text-box
+		max-width: 400px
+		margin: 0 auto
+		margin-bottom: 2rem
+	.text-box:last-child
+		margin-bottom: 0
+
+@media(max-width: 750px)
+	.text-section
+		span
+			display: block
+		p
+			margin-left: 0
+		.text-box
+			max-width: 500px
+// end of text-section
 
 // --- Top section ---
 #top-section
@@ -233,31 +272,140 @@ p,a
 			margin: 0 auto
 // end of why merge
 
-// --- text-section ---
-.text-section
-	max-width: 500px
-	margin: 0 auto
+// --- What you mean for us ---
+#means-for-us
+	background: $dark-grey
+	color: $white
 	h2
-		margin-bottom: 1rem
-	h3
-		color: $blue
-	p
-		margin-left: 40px
-	.text-box
-		max-width: 400px
-		margin: 0 auto
-		margin-bottom: 2rem
-	.text-box:last-child
-		margin-bottom: 0
-
-@media(max-width: 750px)
-	.text-section
-		h2.center
-			// text-align: left
+		color: $black
 		span
 			display: block
+	p
+		max-width: 350px
+		margin-bottom: 1rem
+		opacity: 0.85
+	.box:first-child
+		background: $green
+		width: 300px
+		height: 300px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 auto
+		border-radius: 100%
+@media(max-width: 750px)
+	#means-for-us
+		.box:first-child
+			margin-bottom: 2rem
 		p
-			margin-left: 0
-		.text-box
-			max-width: 500px
-// end of text-section
+			margin: 0 auto
+			margin-bottom: 1rem
+@media(max-width: 400px)
+	#means-for-us
+		.box:first-child
+			width: 250px
+			height: 250px
+// End of what you mean for us
+
+// --- Customer section ---
+#customers
+	.two-boxes
+		max-width: 800px
+		margin: auto
+	p
+		max-width: 350px
+		margin: 0 auto
+// end of customer section
+
+// --- contact-form ---
+#contact-form
+	background: $beige
+	p
+		max-width: 500px
+		margin: 0 auto
+		margin-bottom: 1rem
+	form
+		max-width: 500px
+		margin: 0 auto
+		input
+			padding: 0.5rem
+			background-color: $white
+			transition: background-color 0.3s ease-in-out
+			border: none
+			margin-bottom: 0.5rem
+		input[type="text"]::placeholder, input[type="tel"]::placeholder, input[type="email"]::placeholder
+			color: $black
+			opacity: 0.7
+			border-radius: 3px
+		input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus
+			transition: background-color 0.3s ease-in-out
+			background-color: $dark-grey
+			outline: none
+			color: $white
+			&::placeholder
+				color: $white
+		.name
+			width: 100%
+		.phone, .email
+			width: 49%
+			float: left
+		.phone
+			margin-right: 2%
+		.checkboxes
+			display: inline-block
+			margin-top: 0.5rem
+			margin-bottom: 1rem
+			opacity: 0.7
+			position: relative
+		input[type="checkbox"]
+			position: absolute
+			top: 2px
+			appearance: none
+			width: 0.2rem
+			height: 0.2rem
+			border: 1px solid white
+			background-color: $white
+			transition: background-color 0.3s ease-in-out
+			outline: none
+		input[type="checkbox"]:hover, label:hover
+			cursor: pointer
+		input[type="checkbox"]:focus
+			border: 1px solid $dark-grey
+		input[type="checkbox"]:checked
+			background-color: $green
+			border: 1px solid $green
+			transition: background-color 0.3s ease-in-out
+			outline: none
+		p
+			font-size: 1rem
+			display: inline
+			margin-right: 10px
+		label
+			margin-left: 22px
+			margin-right: 10px
+		input[type="submit"]
+			width: 100%
+			text-transform: uppercase
+			background: $green
+			color: $white
+			font-weight: 600
+			padding: 0.75rem 0.5rem
+			border-radius: 3px
+			transition: background-color 0.3s ease-in-out
+			transition: color 0.3s ease-in-out
+			&:hover, &:focus
+				cursor: pointer
+				outline: none
+				background-color: $dark-grey
+				color: $green
+				transition: background-color 0.3s ease-in-out
+@media(max-width: 400px)
+	#contact-form
+		.checkboxes
+			p
+				margin-bottom: 0.5rem
+				display: block
+			input[type="checkbox"]
+				top: 31px
+
+// end of contact-form

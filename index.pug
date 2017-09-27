@@ -1,7 +1,7 @@
 doctype html
 html(lang="no")
 	head
-		title Tilbehør
+		title Romsdalsbanken
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 		// jQuery
@@ -83,5 +83,46 @@ html(lang="no")
 				.content-wrapper
 					.two-boxes
 						.box
-							h2 Hva betyr du <span>for oss?</span>
-						
+							h2.center Hva betyr du <span>for oss?</span>
+						.box
+							p Du er viktig for oss. Vi tar deg på alvor, vi vil deg vel og brys oss om deg. Vi vil 
+								| hjelpe deg i alle utfordringer i livet og alle livsfaser. Vi vil heie på deg i 
+								| idrettslaget og i livet forøvrig, vi vil støtte deg og hjelpe deg når voksenlivet tar til, 
+								| når du skal etablere deg, når du stifter familie, hvis du blir skilt og livet og økonomien 
+								| &laquo;går i svart&raquo;.
+							p Om du har et firma som er 100 år eller er helt nyoppstartet, vil vi hjelpe deg. Vi skal være en 
+								| rådgiver og en profesjonell	samarbeidspartner. Om du møter medgang eller motgang, skal vi 
+								| være en støttetspiller og være med på reisen sammen med deg.
+		
+		section#customers
+			.inner
+				.content-wrapper
+					h2.center Vil du bli kunde i Romsdalsbanken?
+					.two-boxes
+						.box.center
+							h4.bold Allerede kunde?
+							p Er du i dag kunde i Nesset Sparebank eller BFH, vil du 
+								| automatisk bli overført til Romsdalsbanken 1.1.2018.
+						.box.center
+							h4.bold Ikke kunde i dag?
+							p Vi håper at du tar kontakt, og gleder oss til å svare på de 
+								| spørsmål du eventuelt har, og komme med råd og tips på veien videre. 
+		
+		section#contact-form
+			.inner
+				.content-wrapper
+					h2.center Bli kontaktet av en kunderådgiver 
+					p.center Fyll inn skjemaet under så vil en kundebehandler kontakte deg for å 
+						| informere deg om det du måtte lure på om Romsdalsbanken.
+					
+					form
+						input.name(type="text" placeholder="Navn")
+						input.phone(type="tel" placeholder="Telefon")
+						input.email(type="email" placeholder="Epost")
+						.checkboxes
+							p Ønsker info om 
+							input(type="checkbox" id="private-market" name="private-market")
+							label(for="private-market") Privatmarked
+							input(type="checkbox" id="commercial-market" name="commercial-market")
+							label(for="commercial-market") Bedriftsmarked
+						input(type="submit" value="Send")
