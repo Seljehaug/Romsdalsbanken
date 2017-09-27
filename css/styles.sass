@@ -30,6 +30,9 @@ p,a
 	p,a
 		font-size: 1.1rem
 
+a:hover
+	color: $dark-grey
+
 .inner
 	width: 90%
 	max-width: 1200px
@@ -115,6 +118,46 @@ p,a
 			margin-bottom: 2rem
 // end of two-boxes
 
+// --- three-boxes ---
+.three-boxes
+	display: flex
+	align-items: center
+	justify-content: space-around
+	max-width: 800px
+	margin: 0 auto
+	.box
+		display: flex
+		flex-direction: column
+	// .box:first-child
+	// 	border: 1px solid purple
+	// .box:nth-child(2)
+	// 	border: 1px solid yellow
+	// .box:last-child
+	// 	border: 1px solid red
+@media(max-width: 750px)
+	.three-boxes
+		flex-wrap: wrap
+		.box:first-child
+			width: 100%
+			h3
+				text-align: center
+				margin-bottom: 2rem
+		.box:nth-child(2)
+			width: 50%
+		.box:last-child
+			width: 50%
+
+@media(max-width: 500px)
+	.three-boxes
+		.box
+			margin-bottom: 2rem
+		.box:first-child
+			h3
+				margin-bottom: 0
+		.box:nth-child(2), .box:last-child
+			width: 100%
+// end of three-boxes
+
 // --- text-section ---
 .text-section
 	max-width: 500px
@@ -139,6 +182,12 @@ p,a
 		.text-box
 			max-width: 500px
 // end of text-section
+
+// --- centered-text-one-col ---
+.centered-text-one-col
+	max-width: 500px
+	margin: 0 auto
+// end of centered-text-one-col
 
 // --- Top section ---
 #top-section
@@ -319,7 +368,7 @@ p,a
 
 // --- contact-form ---
 #contact-form
-	background: $beige
+	background: $beige-light
 	p
 		max-width: 500px
 		margin: 0 auto
@@ -407,5 +456,38 @@ p,a
 				display: block
 			input[type="checkbox"]
 				top: 31px
-
 // end of contact-form
+
+// --- Contact us ---
+#contact-us
+	background: $beige
+// end of contact us
+
+.contact-person
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		width: 125px
+		height: 125px
+		border-radius: 100%
+		margin-bottom: 1rem
+	a
+		text-decoration: none
+		color: $white
+		&:hover
+			// color: $dark-grey
+			text-decoration: underline
+			text-decoration-color: $white
+
+// --- Contact private ---
+#contact-private
+	background: $green
+	color: $white
+// end of contact private
+
+// --- Contact private ---
+#contact-business
+	background: $blue
+	color: $white
+// end of contact private
