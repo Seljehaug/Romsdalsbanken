@@ -19,9 +19,12 @@ h3
 	font-size: 2rem
 	margin-bottom: 0.2em
 p,a
-	font-size: 1rem
-// a
-// 	&:hover
+	font-size: 1.2rem
+	line-height: 1.4em
+
+@media(max-width: 750px)
+	p,a
+		font-size: 1.1rem
 
 .inner
 	width: 90%
@@ -32,6 +35,10 @@ p,a
 
 .content-wrapper
 	padding: 2rem 0
+	overflow: hidden
+
+.center
+	text-align: center
 
 #top-line
 	height: 20px
@@ -47,6 +54,24 @@ p,a
 		// max-width: 1200px
 		width: 100%
 
+// --- two-boxes ---
+.two-boxes
+	overflow: hidden
+	display: flex
+	.box
+		width: 49%
+		float: left
+	.box:first-child
+		margin-right: 2%
+@media(max-width: 750px)
+	.two-boxes
+		flex-direction: column
+		.box
+			width: 100%
+		.box:first-child
+			margin-right: 0
+			margin-bottom: 2rem
+// end of two-boxes
 
 // --- ICONS AND LOGOS ---
 .icon
@@ -69,6 +94,11 @@ p,a
 .logo-nessetbanken
 	background-image: url("../img/icons/nessetbanken.svg")
 	height: 100px
+	margin-top: 15px
+.plus-icon
+	background-image: url("../img/icons/plus-icon-thicker.svg")
+	height: 30px
+	margin-top: 15px
 // End of icons and logos
 
 // --- Top section ---
@@ -81,6 +111,7 @@ p,a
 		position: relative
 		margin-top: 2rem
 		margin-right: 2%
+		margin-bottom: 2rem
 	.text-content
 		padding: 2rem
 		background: $green
@@ -90,6 +121,8 @@ p,a
 		position: relative
 	h3 span
 		display: block
+	p
+		opacity: 0.85
 	.panel-first
 		background: $blue
 		height: 420px
@@ -112,7 +145,7 @@ p,a
 
 	.box-right
 		margin-top: 5rem
-		// margin-left: 1%
+		margin-bottom: 2rem
 	.img-content
 		max-width: 450px
 		position: relative
@@ -133,10 +166,19 @@ p,a
 		clear: both
 		max-width: 500px
 		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 auto
 		.icon
 			display: inline-block
-			width: 50%
+			width: 33%
 			padding: 1%
+@media(min-width: 751px) and (max-width: 899px)
+	#top-section
+		.box-left
+			margin-bottom: 4rem
+
 @media(max-width: 900px)
 	#top-section
 		.panel-first
@@ -161,6 +203,61 @@ p,a
 			margin: 0
 		.box-right
 			margin-top: 2rem
+			margin-bottom: 0
 		.img-content
 			margin: 0 auto
+		.bank-logos
+			// max-height: 75px
+
+@media(max-width: 500px)
+	#top-section h3 span
+		display: inline
 // End of top section
+
+// --- why merge ---
+#why-merge
+	background: $blue
+	color: $white
+	.box:first-child
+		display: flex
+		justify-content: center
+		align-items: center
+	h2 span
+		display: block
+	p
+		max-width: 350px
+		opacity: 0.85
+@media(max-width: 750px)
+	#why-merge
+		p
+			margin: 0 auto
+// end of why merge
+
+// --- text-section ---
+.text-section
+	max-width: 500px
+	margin: 0 auto
+	h2
+		margin-bottom: 1rem
+	h3
+		color: $blue
+	p
+		margin-left: 40px
+	.text-box
+		max-width: 400px
+		margin: 0 auto
+		margin-bottom: 2rem
+	.text-box:last-child
+		margin-bottom: 0
+
+@media(max-width: 750px)
+	.text-section
+		h2.center
+			// text-align: left
+		span
+			display: block
+		p
+			margin-left: 0
+		.text-box
+			max-width: 500px
+// end of text-section
