@@ -364,6 +364,8 @@ a:hover {
     opacity: 0.85; }
 
 @media (max-width: 750px) {
+  #why-merge .box:first-child {
+    margin-bottom: 0; }
   #why-merge p {
     margin: 0 auto; } }
 
@@ -432,7 +434,7 @@ a:hover {
       -webkit-transition: background-color 0.3s ease-in-out;
       -o-transition: background-color 0.3s ease-in-out;
       transition: background-color 0.3s ease-in-out;
-      border: none;
+      border: 1px solid transparent;
       margin-bottom: 0.5rem; }
     #contact-form form input[type="text"]::-webkit-input-placeholder, #contact-form form input[type="tel"]::-webkit-input-placeholder, #contact-form form input[type="email"]::-webkit-input-placeholder {
       color: #000000;
@@ -526,6 +528,12 @@ a:hover {
         -webkit-transition: background-color 0.3s ease-in-out;
         -o-transition: background-color 0.3s ease-in-out;
         transition: background-color 0.3s ease-in-out; }
+  #contact-form .fb_invalid input {
+    border: 1px solid #fb1313; }
+
+@media (max-width: 500px) {
+  #contact-form form .phone, #contact-form form .email {
+    width: 100%; } }
 
 @media (max-width: 400px) {
   #contact-form .checkboxes p {

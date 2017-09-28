@@ -9,6 +9,8 @@
     <!-- Styling-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- JS-->
+    <script src="js/romsdalsbanken.js"></script>
     <!-- Typekit--><link rel="stylesheet" href="https://use.typekit.net/oik1thr.css">
   </head>
   <body>
@@ -136,10 +138,16 @@
           <h2 class="center">Bli kontaktet av en kunderådgiver </h2>
           <p class="center">
             Fyll inn skjemaet under så vil en kundebehandler kontakte deg for å informere deg om det du måtte lure på om Romsdalsbanken.</p>
-          <form>
-            <input class="name" type="text" placeholder="Navn">
-            <input class="phone" type="tel" placeholder="Telefon">
-            <input class="email" type="email" placeholder="Epost">
+          <form class="validate" method="post" action="#" enctype="multipart/form-data">
+            <div class="required">
+              <input class="name" type="text" placeholder="Navn">
+            </div>
+            <div class="required">
+              <input class="phone" type="tel" placeholder="Telefon">
+            </div>
+            <div class="required">
+              <input class="email" type="email" placeholder="Epost">
+            </div>
             <div class="checkboxes">
               <p>Ønsker info om </p>
               <input type="checkbox" id="private-market" name="private-market">

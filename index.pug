@@ -9,6 +9,8 @@ html(lang="no")
 		// Styling
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
 		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		// JS
+		script(src="js/romsdalsbanken.js")
 		// Typekit
 		<link rel="stylesheet" href="https://use.typekit.net/oik1thr.css">
 			
@@ -77,6 +79,7 @@ html(lang="no")
 							h3 Lag og foreninger 
 							p Vi heier fortsatt på våre lokale helter, og vil fortsatt være en samarbeidspartner og 
 								| støttespiller for. Vi bryr oss!
+								
 		section#means-for-us
 			.inner
 				.content-wrapper
@@ -114,10 +117,13 @@ html(lang="no")
 					p.center Fyll inn skjemaet under så vil en kundebehandler kontakte deg for å 
 						| informere deg om det du måtte lure på om Romsdalsbanken.
 					
-					form
-						input.name(type="text" placeholder="Navn")
-						input.phone(type="tel" placeholder="Telefon")
-						input.email(type="email" placeholder="Epost")
+					form(method="post", action="#", enctype="multipart/form-data").validate
+						.required
+							input.name(type="text" placeholder="Navn")
+						.required
+							input.phone(type="tel" placeholder="Telefon")
+						.required
+							input.email(type="email" placeholder="Epost")
 						.checkboxes
 							p Ønsker info om 
 							input(type="checkbox" id="private-market" name="private-market")

@@ -128,12 +128,7 @@ a:hover
 	.box
 		display: flex
 		flex-direction: column
-	// .box:first-child
-	// 	border: 1px solid purple
-	// .box:nth-child(2)
-	// 	border: 1px solid yellow
-	// .box:last-child
-	// 	border: 1px solid red
+
 @media(max-width: 750px)
 	.three-boxes
 		flex-wrap: wrap
@@ -317,6 +312,8 @@ a:hover
 		opacity: 0.85
 @media(max-width: 750px)
 	#why-merge
+		.box:first-child
+			margin-bottom: 0
 		p
 			margin: 0 auto
 // end of why merge
@@ -380,7 +377,7 @@ a:hover
 			padding: 0.5rem
 			background-color: $white
 			transition: background-color 0.3s ease-in-out
-			border: none
+			border: 1px solid transparent
 			margin-bottom: 0.5rem
 		input[type="text"]::placeholder, input[type="tel"]::placeholder, input[type="email"]::placeholder
 			color: $black
@@ -448,6 +445,16 @@ a:hover
 				background-color: $dark-grey
 				color: $green
 				transition: background-color 0.3s ease-in-out
+
+	.fb_invalid input
+		border: 1px solid #fb1313
+
+@media(max-width: 500px)
+	#contact-form
+		form
+			.phone, .email
+				width: 100%
+
 @media(max-width: 400px)
 	#contact-form
 		.checkboxes
